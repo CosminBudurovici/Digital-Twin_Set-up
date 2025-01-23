@@ -1,0 +1,68 @@
+{
+  "imageId": "AA/03/04",
+  "version": 3,
+  "name": "fly detection",
+  "colorProfile": "ARGB",
+  "findings": [
+    {
+      "x": 0.2,
+      "y": 0.1,
+      "width": 0.3,
+      "height": 0.25,
+      "stretched": false,
+      "id": "a1b2c3d4-5678-90ab-cdef-123456789013",
+      "slug": "insect1_slug",
+      "colorProfile": "ARGB",
+      "probability": 0.95,
+      "type": "insect1"
+    },
+    {
+      "x": 0.6,
+      "y": 0.45,
+      "width": 0.2,
+      "height": 0.18,
+      "stretched": true,
+      "id": "efgh1234-5678-90ab-cdef-123456789014",
+      "slug": "insect2_slug",
+      "colorProfile": "ARGB",
+      "probability": 0.82,
+      "type": "insect2"
+    },
+    {
+      "x": 0.15,
+      "y": 0.7,
+      "width": 0.15,
+      "height": 0.12,
+      "stretched": false,
+      "id": "abcdef12-3456-7890-abcdef-123456789015",
+      "slug": "plant1_slug",
+      "colorProfile": "ARGB",
+      "probability": 0.78,
+      "type": "insect1"
+    },
+    {
+      "x": 0.8,
+      "y": 0.2,
+      "width": 0.18,
+      "height": 0.22,
+      "stretched": false,
+      "id": "98765432-1098-7654-3210-fedcba098765",
+      "slug": "insect3_slug",
+      "colorProfile": "ARGB",
+      "probability": 0.89,
+      "type": "insect3"
+    },
+    {
+      "x": 0.4,
+      "y": 0.5,
+      "width": 0.25,
+      "height": 0.2,
+      "stretched": true,
+      "id": "fedcba98-7654-3210-fedcba-09876543210",
+      "slug": "plant2_slug",
+      "colorProfile": "ARGB",
+      "probability": 0.72,
+      "type": "insect2"
+    }
+  ]
+}

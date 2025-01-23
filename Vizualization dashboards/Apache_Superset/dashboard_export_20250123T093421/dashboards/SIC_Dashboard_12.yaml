@@ -1,0 +1,210 @@
+dashboard_title: SIC Dashboard
+description: null
+css: ''
+slug: null
+certified_by: ''
+certification_details: ''
+published: true
+uuid: 03a94ea6-adf8-403e-bf89-e20a2c1e39e6
+position:
+  CHART-XF64wyVDv2t48BrB7jqTx:
+    children: []
+    id: CHART-XF64wyVDv2t48BrB7jqTx
+    meta:
+      chartId: 121
+      height: 65
+      sliceName: All
+      uuid: 794c52e3-6f8d-414f-81fe-d782042b7022
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N9Xc0Z3L1qCXlJ1Qks8GM
+    type: CHART
+  CHART-explore-122-1:
+    children: []
+    id: CHART-explore-122-1
+    meta:
+      chartId: 122
+      height: 65
+      sliceName: Insect_Timeline
+      uuid: d53fe34b-79f2-4560-a559-c5e181b695c0
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-j5Q79PVH01P_9zAvyopsA
+    type: CHART
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-N9Xc0Z3L1qCXlJ1Qks8GM
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: SIC Dashboard
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-N9Xc0Z3L1qCXlJ1Qks8GM:
+    children:
+    - CHART-XF64wyVDv2t48BrB7jqTx
+    - CHART-explore-122-1
+    id: ROW-N9Xc0Z3L1qCXlJ1Qks8GM
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+metadata:
+  chart_configuration:
+    '122':
+      id: 122
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 121
+  global_chart_configuration:
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    chartsInScope:
+    - 121
+    - 122
+  map_label_colors:
+    AA: '#1FA8C9'
+    BB: '#454E7C'
+  color_scheme: ''
+  refresh_frequency: 0
+  color_scheme_domain: []
+  expanded_slices: {}
+  label_colors: {}
+  shared_label_colors: []
+  timed_refresh_immune_slices: []
+  cross_filters_enabled: true
+  default_filters: '{}'
+  native_filter_configuration:
+  - id: NATIVE_FILTER_DIVIDER-2HSg1bEhjSKCRxaRNrhEc
+    type: DIVIDER
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    title: Filter by insect type
+    description: ''
+  - id: NATIVE_FILTER-t6Cz-Jrqfe-f_hNEsReWT
+    controlValues:
+      enableEmptyFilter: false
+      defaultToFirstItem: false
+      multiSelect: true
+      searchAllOptions: false
+      inverseSelection: false
+    name: InsectType
+    filterType: filter_select
+    targets:
+    - column:
+        name: insecttype
+      datasetUuid: 3b413046-9b3f-4f80-8c5d-cea590ed9c13
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    type: NATIVE_FILTER
+    description: ''
+  - id: NATIVE_FILTER-aJMUR9TOOSPcokvzrsdUz
+    controlValues:
+      enableEmptyFilter: false
+      defaultToFirstItem: false
+      multiSelect: true
+      searchAllOptions: false
+      inverseSelection: false
+    name: Field
+    filterType: filter_select
+    targets:
+    - column:
+        name: field
+      datasetUuid: 3b413046-9b3f-4f80-8c5d-cea590ed9c13
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    type: NATIVE_FILTER
+    description: ''
+  - id: NATIVE_FILTER_DIVIDER-EUVUkrgq9edLkGt0nPLOy
+    type: DIVIDER
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    title: Filter by location
+    description: ''
+  - id: NATIVE_FILTER-dgWSlYL7jgLhBS0H27o0-
+    controlValues:
+      enableEmptyFilter: false
+      defaultToFirstItem: false
+      multiSelect: true
+      searchAllOptions: false
+      inverseSelection: false
+    name: Loc1
+    filterType: filter_select
+    targets:
+    - column:
+        name: location1
+      datasetUuid: 3b413046-9b3f-4f80-8c5d-cea590ed9c13
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded:
+      - 121
+    type: NATIVE_FILTER
+    description: ''
+  - id: NATIVE_FILTER-S9n8XnnUGrPBsW4KE564i
+    controlValues:
+      enableEmptyFilter: false
+      defaultToFirstItem: false
+      multiSelect: true
+      searchAllOptions: false
+      inverseSelection: false
+    name: Loc2
+    filterType: filter_select
+    targets:
+    - column:
+        name: location2
+      datasetUuid: 3b413046-9b3f-4f80-8c5d-cea590ed9c13
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded:
+      - 121
+    type: NATIVE_FILTER
+    description: ''
+version: 1.0.0

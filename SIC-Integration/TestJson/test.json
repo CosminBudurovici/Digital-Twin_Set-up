@@ -1,0 +1,152 @@
+{
+  "imageId": "AA/01/01",
+  "version": 1,
+  "name": "fly detection",
+  "colorProfile": "ARGB",
+  "findings": [
+    {
+      "x": 0.3,
+      "y": 0.2,
+      "width": 0.9987,
+      "height": 0.8876,
+      "stretched": false,
+      "id": "2ebfed4f-7348-49aa-8634-e3c7e3e4b392",
+      "slug": "RIG0YTtISp",
+      "colorProfile": "ARGB",
+      "probability": 0.871345,
+      "type": "insect1"
+    },
+    {
+      "x": 0.3,
+      "y": 0.2,
+      "width": 0.9987,
+      "height": 0.8876,
+      "stretched": false,
+      "id": "2ebfed4f-7348-49aa-8634-e3c7e3e4b393",
+      "slug": "RIG0YTtISp",
+      "colorProfile": "ARGB",
+      "probability": 0.871345,
+      "type": "insect1"
+    },
+    {
+      "x": 0.4,
+      "y": 0.3987,
+      "width": 0.2435,
+      "height": 0.39047,
+      "stretched": false,
+      "id": "b7c226dd-704d-4ef9-ac99-d705cc551fce",
+      "slug": "pbpsrwMSBc",
+      "colorProfile": "ARGB",
+      "probability": 0.61,
+      "type": "insect2"
+    },
+    {
+      "x": 0.401,
+      "y": 0.3567,
+      "width": 0.29189,
+      "height": 0.4876909,
+      "stretched": false,
+      "id": "b7c226dd-704d-4ef9-ac99-d705cc551fce",
+      "slug": "r85prWbyK_",
+      "colorProfile": "ARGB",
+      "probability": 0.7832,
+      "type": "insect1"
+    },
+    {
+      "x": 0.4,
+      "y": 0.3987,
+      "width": 0.2435,
+      "height": 0.39047,
+      "stretched": false,
+      "id": "b7c226dd-704d-4ef9-ac99-d705cc551fce",
+      "slug": "pbpsrwMSBc",
+      "colorProfile": "ARGB",
+      "probability": 0.61,
+      "type": "insect1"
+    },
+    {
+      "x": 0.43234235,
+      "y": 0.48902,
+      "width": 0.20751025,
+      "height": 0.318762,
+      "stretched": false,
+      "id": "b7c226dd-704d-4ef9-ac99-d705cc551fce",
+      "slug": "XUgWmy7ZSS",
+      "colorProfile": "ARGB",
+      "probability": 0.19,
+      "type": "insect1"
+    },
+    {
+      "x": 0.5981265,
+      "y": 0.4977,
+      "width": 0.2679071,
+      "height": 0.316898,
+      "stretched": false,
+      "id": "b7c226dd-704d-4ef9-ac99-d705cc551fce",
+      "slug": "pbpsrwMSBc",
+      "colorProfile": "ARGB",
+      "probability": 0.7507,
+      "type": "insect2"
+    },
+    {
+      "x": 0.4769876,
+      "y": 0.1252525,
+      "width": 0.2435,
+      "height": 0.39047,
+      "stretched": false,
+      "id": "b946ec1d-a182-4802-bdf9-09824cf5b9d2",
+      "slug": "Zk1iqrikYZ",
+      "colorProfile": "ARGB",
+      "probability": 0.61,
+      "type": "insect3"
+    },
+    {
+      "x": 0.4,
+      "y": 0.3987,
+      "width": 0.2435,
+      "height": 0.39047,
+      "stretched": false,
+      "id": "b7c226dd-704d-4ef9-ac99-d705cc551fce",
+      "slug": "pbpsrwMSBc",
+      "colorProfile": "ARGB",
+      "probability": 0.61,
+      "type": "insect2"
+    },
+    {
+      "x": 0.17694,
+      "y": 0.2424523,
+      "width": 0.98497,
+      "height": 0.9898696,
+      "stretched": false,
+      "id": "77b38905-d745-40b5-97ce-9fd936d1ee7d",
+      "slug": "pbpsrwMSBc",
+      "colorProfile": "ARGB",
+      "probability": 0.864,
+      "type": "insect3"
+    },
+    {
+      "x": 0.4,
+      "y": 0.3987,
+      "width": 0.2435,
+      "height": 0.39047,
+      "stretched": false,
+      "id": "b7c226dd-704d-4ef9-ac99-d705cc551fce",
+      "slug": "pbpsrwMSBc",
+      "colorProfile": "ARGB",
+      "probability": 0.3,
+      "type": "insect4"
+    },
+    {
+      "x": 0.4,
+      "y": 0.3987,
+      "width": 0.2435,
+      "height": 0.39047,
+      "stretched": false,
+      "id": "6a4891d7-50fe-4a21-ae35-537e4900595b",
+      "slug": "8slXHTOxoO",
+      "colorProfile": "ARGB",
+      "probability": 0.13,
+      "type": "insect1"
+    }
+  ]
+}

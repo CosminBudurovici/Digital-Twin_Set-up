@@ -1,0 +1,30 @@
+services:
+  loki:
+    image: grafana/loki
+    container_name: loki
+    volumes:
+      - ./loki-config.yaml:/mnt/config/loki-config.yaml
+      - loki_data:/loki
+    user: "root"
+    ports:
+      - "3100:3100"
+    command: 
+      - '--config.file=/mnt/config/loki-config.yaml'
+
+  promtail:
+    image: grafana/promtail
+    container_name: promtail
+    volumes:
+      - ./promtail-config.yaml:/mnt/config/promtail-config.yaml
+      - spark-master_logs:/monitor_logs/spark-master/
+      - spark-worker_logs:/monitor_logs/spark-worker/
+    depends_on:
+      - loki
+    command: -config.file=/mnt/config/promtail-config.yaml
+
+volumes:
+  spark-master_logs:
+    external: true
+  spark-worker_logs:
+    external: true
+  loki_data:
