@@ -13,13 +13,12 @@
 6. Open the terminal in the SIC-integration folder of this repository and type the folwing commands to upload the code to apaches spark:
 - Create a folder for the test files with the folwing tree commands: `docker exec -it spark-master bash`, `mkdir inputTest` and `exit`
 - Add the test files: `docker cp TestJson/test4.json spark-master:/opt/bitnami/spark/inputTest/`
-- Add the code to the project: `docker cp target/SIC-Integration-1.0-SNAPSHOT.jar spark-master:/opt/bitnami/spark/`
+- For development it is recomended to use an IDE with Maven like Intelij. In the IDE go to project settings and check that java17 is selected
+Settings > Project structure > SDK – (java version 17), Language level – SDK default.
+- To update the project code first pachage it. (You can do this in Intelij by going to Maven > Lifecycle > Package) and then running the command to submit the code to apache spark with: `docker cp target/SIC-Integration-1.0-SNAPSHOT.jar spark-master:/opt/bitnami/spark/`
 7. How to run and update the aplication:
 - Run the aplication: `docker exec -it spark-master /opt/bitnami/spark/bin/spark-submit --packages io.delta:delta-spark_2.12:3.2.0 --master spark://spark-master:7077 --class org.example.Main /opt/bitnami/spark/SIC-Integration-1.0-SNAPSHOT.jar` 
 - Explore the apache spark directory with bash: `docker exec -it spark-master bash` 
-- For development it is recomended to use an IDE with Maven like Intelij. In the IDE go to project settings and check that java17 is selected
-Settings > Project structure > SDK – (java version 17), Language level – SDK default.
-- To update the project first pachage it. (You can do this in Intelij by going to Maven > Lifecycle > Package) and then running the command to submit the code to apache spark also mentioned above (`docker cp target/SIC-Integration-1.0-SNAPSHOT.jar spark-master:/opt/bitnami/spark/`)
 
 ## Seting up the Digital Twin Interface
 
