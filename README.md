@@ -53,15 +53,15 @@ Settings > Project structure > SDK – (java version 17), Language level – SDK
 </dict> 
 </plist> 
 ~~~
-7. Save the file with control O and then enter folowed by control X.
-8. Run the folowing command to start node exporter: `sudo launchctl load /Library/LaunchDaemons/node_exporter.plist`
-9. To check if the node exporter is running go to [http://localhost:9100/metrics](http://localhost:9100/metrics)
-10. To configure apache spark for monitoring open a terminal Monitoring_set_up_&_configuration_files/Apache Spark form this directory and run the folwing commands to configure loging and metric colection: `docker cp log4j2.properties spark-master:/opt/bitnami/spark/conf/`, `docker cp log4j2.properties spark-worker:/opt/bitnami/spark/conf/`, `docker cp log4j2.properties spark-master:/opt/bitnami/spark/conf/` and `docker cp log4j2.properties spark-worker:/opt/bitnami/spark/conf/`
-11. To start prometheus open a terminal and go to Monitoring_set_up_&_configuration_files/Prometheus from this directory and run the folwing comand: `docker compose up -d`.
-12. You can check that prometheus is running by going to [http://localhost:9090/](to http://localhost:9090/).
-13. To start loki and promtail open a terminal and go to Monitoring_set_up_&_configuration_files/Loki+Promtail from this directory and run the folowing comand: `docker compose up -d`.
-14. To check that loki+prometail are working go to http://localhost:3100/ there should be a small mesage.
-15. To run grafana open a terminal and go to Monitoring_set_up_&_configuration_files/Grafana in this directory and then run: `docker compose up -d`
-16. To access grafana go to [http://localhost:3000/](http://localhost:3000/).
-17. Log in with username: admin and pasword: admin.
-18. Add in the prexisting dashboard to grafana by going to Dashboards>New Dashboard and submiting the json found in this directory at Vizualization dashboards/Grafana. You need to create two separate dashbaords.
+6. Save the file with control O and then enter folowed by control X.
+7. Run the folowing command to start node exporter: `sudo launchctl load /Library/LaunchDaemons/node_exporter.plist`
+8. To check if the node exporter is running go to [http://localhost:9100/metrics](http://localhost:9100/metrics)
+9. To configure apache spark for monitoring open a terminal Monitoring_set_up_&_configuration_files/Apache Spark form this directory and run the folwing commands to configure loging and metric colection: `docker cp log4j2.properties spark-master:/opt/bitnami/spark/conf/`, `docker cp log4j2.properties spark-worker:/opt/bitnami/spark/conf/`, `docker cp log4j2.properties spark-master:/opt/bitnami/spark/conf/` and `docker cp log4j2.properties spark-worker:/opt/bitnami/spark/conf/`
+10. To start prometheus open a terminal and go to Monitoring_set_up_&_configuration_files/Prometheus from this directory and run the folwing comand: `docker compose up -d`.
+11. You can check that prometheus is running by going to [http://localhost:9090/](to http://localhost:9090/).
+12. To start loki and promtail open a terminal and go to Monitoring_set_up_&_configuration_files/Loki+Promtail from this directory and run the folowing comand: `docker compose up -d`.
+13. To check that loki+prometail are working go to http://localhost:3100/ there should be a small mesage.
+14. To run grafana open a terminal and go to Monitoring_set_up_&_configuration_files/Grafana in this directory and then run: `docker compose up -d`
+15. To access grafana go to [http://localhost:3000/](http://localhost:3000/).
+16. Log in with username: admin and pasword: admin.
+17. Add in the prexisting dashboard to grafana by going to Dashboards>New Dashboard and submiting the json found in this directory at Vizualization dashboards/Grafana. You need to create two separate dashbaords.
