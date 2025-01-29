@@ -18,7 +18,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 3,
+  "id": 11,
   "links": [
     {
       "asDropdown": false,
@@ -37,7 +37,7 @@
     {
       "datasource": {
         "type": "loki",
-        "uid": "ae9ka5k69v2m8d"
+        "uid": "bebgwoonpt7ggb"
       },
       "fieldConfig": {
         "defaults": {},
@@ -52,6 +52,7 @@
       "id": 1,
       "options": {
         "dedupStrategy": "none",
+        "enableInfiniteScrolling": false,
         "enableLogDetails": true,
         "prettifyLogMessage": false,
         "showCommonLabels": false,
@@ -60,16 +61,16 @@
         "sortOrder": "Descending",
         "wrapLogMessage": false
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.0",
       "targets": [
         {
           "datasource": {
             "type": "loki",
-            "uid": "ae9ka5k69v2m8d"
+            "uid": "bebgwoonpt7ggb"
           },
-          "editorMode": "builder",
+          "direction": "backward",
+          "editorMode": "code",
           "expr": "{job=\"spark-master\"} |= `INFO` |= `Job` |= `took`",
-          "hide": false,
           "queryType": "range",
           "refId": "A"
         }
@@ -80,7 +81,7 @@
     {
       "datasource": {
         "type": "loki",
-        "uid": "ae9ka5k69v2m8d"
+        "uid": "bebgwoonpt7ggb"
       },
       "fieldConfig": {
         "defaults": {},
@@ -95,6 +96,7 @@
       "id": 2,
       "options": {
         "dedupStrategy": "none",
+        "enableInfiniteScrolling": false,
         "enableLogDetails": true,
         "prettifyLogMessage": false,
         "showCommonLabels": false,
@@ -103,14 +105,15 @@
         "sortOrder": "Descending",
         "wrapLogMessage": false
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.0",
       "targets": [
         {
           "datasource": {
             "type": "loki",
-            "uid": "ae9ka5k69v2m8d"
+            "uid": "bebgwoonpt7ggb"
           },
-          "editorMode": "builder",
+          "direction": "backward",
+          "editorMode": "code",
           "expr": "{job=\"spark-master\"} |= `WARN`",
           "queryType": "range",
           "refId": "A"
@@ -122,7 +125,7 @@
     {
       "datasource": {
         "type": "loki",
-        "uid": "ae9ka5k69v2m8d"
+        "uid": "bebgwoonpt7ggb"
       },
       "fieldConfig": {
         "defaults": {},
@@ -137,6 +140,7 @@
       "id": 4,
       "options": {
         "dedupStrategy": "none",
+        "enableInfiniteScrolling": false,
         "enableLogDetails": true,
         "prettifyLogMessage": false,
         "showCommonLabels": false,
@@ -145,14 +149,15 @@
         "sortOrder": "Descending",
         "wrapLogMessage": false
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.0",
       "targets": [
         {
           "datasource": {
             "type": "loki",
-            "uid": "ae9ka5k69v2m8d"
+            "uid": "bebgwoonpt7ggb"
           },
-          "editorMode": "builder",
+          "direction": "backward",
+          "editorMode": "code",
           "expr": "{job=\"spark-worker\"} |= `WARN`",
           "queryType": "range",
           "refId": "A"
@@ -164,7 +169,7 @@
     {
       "datasource": {
         "type": "loki",
-        "uid": "ae9ka5k69v2m8d"
+        "uid": "bebgwoonpt7ggb"
       },
       "fieldConfig": {
         "defaults": {},
@@ -179,6 +184,7 @@
       "id": 3,
       "options": {
         "dedupStrategy": "none",
+        "enableInfiniteScrolling": false,
         "enableLogDetails": true,
         "prettifyLogMessage": false,
         "showCommonLabels": false,
@@ -187,16 +193,16 @@
         "sortOrder": "Descending",
         "wrapLogMessage": false
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.0",
       "targets": [
         {
           "datasource": {
             "type": "loki",
-            "uid": "ae9ka5k69v2m8d"
+            "uid": "bebgwoonpt7ggb"
           },
-          "editorMode": "builder",
+          "direction": "backward",
+          "editorMode": "code",
           "expr": "{job=\"spark-master\"} |= `ERROR`",
-          "hide": false,
           "queryType": "range",
           "refId": "B"
         }
@@ -207,7 +213,7 @@
     {
       "datasource": {
         "type": "loki",
-        "uid": "ae9ka5k69v2m8d"
+        "uid": "bebgwoonpt7ggb"
       },
       "fieldConfig": {
         "defaults": {},
@@ -222,6 +228,7 @@
       "id": 5,
       "options": {
         "dedupStrategy": "none",
+        "enableInfiniteScrolling": false,
         "enableLogDetails": true,
         "prettifyLogMessage": false,
         "showCommonLabels": false,
@@ -230,29 +237,18 @@
         "sortOrder": "Descending",
         "wrapLogMessage": false
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.0",
       "targets": [
         {
           "datasource": {
             "type": "loki",
-            "uid": "ae9ka5k69v2m8d"
+            "uid": "bebgwoonpt7ggb"
           },
-          "editorMode": "code",
-          "expr": "{job=\"spark-worker\"} |= `at `",
-          "hide": false,
+          "direction": "backward",
+          "editorMode": "builder",
+          "expr": "{job=\"spark-worker\"} |= `Caused by` or `ERROR`",
           "queryType": "range",
           "refId": "B"
-        },
-        {
-          "datasource": {
-            "type": "loki",
-            "uid": "ae9ka5k69v2m8d"
-          },
-          "editorMode": "builder",
-          "expr": "{job=\"spark-worker\"} |= `Caused by`",
-          "hide": false,
-          "queryType": "range",
-          "refId": "A"
         }
       ],
       "title": "Error logs spark-worker",
@@ -273,6 +269,6 @@
   "timezone": "browser",
   "title": "Log monitoring",
   "uid": "be9lod9jjij28e",
-  "version": 7,
+  "version": 3,
   "weekStart": ""
 }
