@@ -18,7 +18,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 1,
+  "id": 7,
   "links": [
     {
       "asDropdown": false,
@@ -37,7 +37,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "fe9ka3k9j3dvke"
+        "uid": "eebgwhp7prpq8a"
       },
       "fieldConfig": {
         "defaults": {
@@ -60,7 +60,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "yellow",
@@ -159,7 +160,7 @@
         },
         "showAdvancedTypes": true
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.0",
       "repeat": "serversAll",
       "repeatDirection": "h",
       "targets": [
@@ -185,7 +186,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "fe9ka3k9j3dvke"
+        "uid": "eebgwhp7prpq8a"
       },
       "fieldConfig": {
         "defaults": {
@@ -211,7 +212,8 @@
             "mode": "percentage",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "orange",
@@ -252,7 +254,7 @@
           "titleSize": 2
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.0",
       "targets": [
         {
           "editorMode": "code",
@@ -268,7 +270,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "fe9ka3k9j3dvke"
+        "uid": "eebgwhp7prpq8a"
       },
       "fieldConfig": {
         "defaults": {
@@ -294,7 +296,8 @@
             "mode": "percentage",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "orange",
@@ -335,7 +338,7 @@
           "titleSize": 2
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.0",
       "targets": [
         {
           "editorMode": "code",
@@ -351,7 +354,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "fe9ka3k9j3dvke"
+        "uid": "eebgwhp7prpq8a"
       },
       "fieldConfig": {
         "defaults": {
@@ -377,7 +380,8 @@
             "mode": "percentage",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "orange",
@@ -418,7 +422,7 @@
           "titleSize": 2
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.0",
       "targets": [
         {
           "editorMode": "code",
@@ -434,7 +438,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "fe9ka3k9j3dvke"
+        "uid": "eebgwhp7prpq8a"
       },
       "fieldConfig": {
         "defaults": {
@@ -485,7 +489,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "#EAB839",
@@ -516,11 +521,12 @@
           "showLegend": false
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.0",
       "targets": [
         {
           "editorMode": "code",
@@ -536,7 +542,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "fe9ka3k9j3dvke"
+        "uid": "eebgwhp7prpq8a"
       },
       "fieldConfig": {
         "defaults": {
@@ -587,7 +593,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "#EAB839",
@@ -618,11 +625,12 @@
           "showLegend": false
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.0",
       "targets": [
         {
           "editorMode": "code",
@@ -638,7 +646,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "fe9ka3k9j3dvke"
+        "uid": "eebgwhp7prpq8a"
       },
       "fieldConfig": {
         "defaults": {
@@ -689,7 +697,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "#EAB839",
@@ -720,11 +729,12 @@
           "showLegend": false
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "single",
           "sort": "none"
         }
       },
-      "pluginVersion": "11.4.0",
+      "pluginVersion": "11.5.0",
       "targets": [
         {
           "editorMode": "code",
@@ -790,6 +800,6 @@
   "timezone": "browser",
   "title": "Hardware Monitoring",
   "uid": "ee9kbwqcjdurkd",
-  "version": 19,
+  "version": 9,
   "weekStart": ""
 }
