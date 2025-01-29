@@ -11,6 +11,7 @@
 - 'docker run -d --name spark-worker --network spark-network --mount type=volume,source=spark-worker_logs,target=/opt/bitnami/spark/logs -h spark-worker -p 8081:8081 bitnami/spark:latest /opt/bitnami/spark/bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077'
 5. Check to se if they are running by going to the [http://localhost:8080](http://localhost:8080) and [http://localhost:8080](http://localhost:8080).
 6. Open the terminal in the SIC-integration folder of this repository and type the folwing commands to upload the code to apaches spark:
+- Create a folder for the test files with the folwing tree commands: 'docker exec -it spark-master bash', 'mkdir inputTest' and 'exit'
 - Add the test files: 'docker cp TestJson/test4.json spark-master:/opt/bitnami/spark/inputTest/'
 - Add the code to the project: 'docker cp target/SIC-Integration-1.0-SNAPSHOT.jar spark-master:/opt/bitnami/spark/'
 7. How to run and update the aplication:
