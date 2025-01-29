@@ -3,7 +3,7 @@
 ## Seting up Digital Twin
 
 1. Download this repository
-2. Install java 17 with [homebrew](https://formulae.brew.sh/formula/openjdk@17)
+2. Install java 17 with [homebrew](https://formulae.brew.sh/formula/openjdk@17) (Install homebrew first from [here](https://brew.sh))
 3. Install [docker desktop](https://www.docker.com/products/docker-desktop/)
 4. Open a comand prompt and type the folowing comands:
 - 'docker network create spark-network'
