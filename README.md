@@ -23,19 +23,42 @@ Settings > Project structure > SDK – (java version 17), Language level – SDK
 ## Seting up the Digital Twin Interface
 
 1. Instal [apache superset](https://superset.apache.org/docs/installation/docker-compose) preferably using docker compose.
-2. Open apache supeset and hit the uplad button.
-3. Go to Visulaization dashboards/Apache_superset in this directory and submit the folder.
+2. Since the default ports are used by spark u need to go to the docker-compose.yml file and change the ports from 8088:8088 to something like 8098:8088
+3. Open apache supeset and hit the upload button.
+4. if after entering login the website does not load and u are stuck restart superset and run it with `docker compose -f docker-compose-non-dev.yml up`, remeber that you need to change the port in the docker-compose-non-dev.yml from 8088:8088 to 8098:8088 (if it still doesn't load let it run for some time and try again)
+5. Go to Visulaization dashboards/Apache_superset in this directory and submit the folder.
 
 ## Seting up the Digital Twin Monitoring System
 
-1. Install the prometheus node exporter on all computers you want to monitor using this [tutorial](https://medium.com/@mishra.anshuman6/how-node-exporter-of-prometheus-works-on-macos-servers-ace131d51d56).
-2. To configure apache spark for monitoring open a terminal Monitoring_set_up_&_configuration_files/Apache Spark form this directory and run the folwing commands to configure loging and metric colection: `docker cp log4j2.properties spark-master:/opt/bitnami/spark/conf/`, `docker cp log4j2.properties spark-worker:/opt/bitnami/spark/conf/`, `docker cp log4j2.properties spark-master:/opt/bitnami/spark/conf/` and `docker cp log4j2.properties spark-worker:/opt/bitnami/spark/conf/`
-
-3. To start prometheus open a terminal and go to Monitoring_set_up_&_configuration_files/Prometheus from this directory and run the folwing comand: `docker compose up -d`.
-4. You can check that prometheus is running by going to [http://localhost:9090/](to http://localhost:9090/).
-5. To start loki and promtail open a terminal and go to Monitoring_set_up_&_configuration_files/Loki+Promtail from this directory and run the folowing comand: `docker compose up -d`.
-6. To check that loki+prometail are working go to http://localhost:3100/ there should be a small mesage.
-7. To run grafana open a terminal and go to Monitoring_set_up_&_configuration_files/Grafana in this directory and then run: `docker compose up -d`
-8. To access grafana go to [http://localhost:3000/](http://localhost:3000/).
-9. Log in with username: admin and pasword: admin.
-10. Add in the prexisting dashboard to grafana by going to Dashboards>New Dashboard and submiting the json found in this directory at Vizualization dashboards/Grafana. You need to create two separate dashbaords.
+1. Go to [https://github.com/prometheus/node_exporter/releases](https://github.com/prometheus/node_exporter/releases) and download the newest release of the darwin-amd64 version of the node exporter and then extract it.
+2. Go into the newly downloaded folder and run the folowing command to move the node exporter to its right location: `sudo mv node_exporter /usr/local/bin/`
+3. Open a new terminal type the following command twice: `cd..`
+4. Run the folowing command: `sudo nano Library/LaunchDaemons/node_exporter.plist`
+5. In the window that opens paste the folowing: `<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"> 
+<plist version="1.0"> 
+<dict> 
+  <key>KeepAlive</key> 
+  <true/> 
+  <key>Label</key> 
+  <string>node_exporter</string> 
+  <key>ProgramArguments</key> 
+  <array> 
+    <string>/usr/local/bin/node_exporter</string> 
+  </array> 
+  <key>RunAtLoad</key> 
+  <true/> 
+</dict> 
+</plist>`
+6. Save the file with control O and then enter folowed by control X.
+7. Run the folowing command to start node exporter: `sudo launchctl load /Library/LaunchDaemons/node_exporter.plist`
+8. To check if the node exporter is running go to [http://localhost:9100/metrics](http://localhost:9100/metrics)
+9. To configure apache spark for monitoring open a terminal Monitoring_set_up_&_configuration_files/Apache Spark form this directory and run the folwing commands to configure loging and metric colection: `docker cp log4j2.properties spark-master:/opt/bitnami/spark/conf/`, `docker cp log4j2.properties spark-worker:/opt/bitnami/spark/conf/`, `docker cp log4j2.properties spark-master:/opt/bitnami/spark/conf/` and `docker cp log4j2.properties spark-worker:/opt/bitnami/spark/conf/`
+10. To start prometheus open a terminal and go to Monitoring_set_up_&_configuration_files/Prometheus from this directory and run the folwing comand: `docker compose up -d`.
+11. You can check that prometheus is running by going to [http://localhost:9090/](to http://localhost:9090/).
+12. To start loki and promtail open a terminal and go to Monitoring_set_up_&_configuration_files/Loki+Promtail from this directory and run the folowing comand: `docker compose up -d`.
+13. To check that loki+prometail are working go to http://localhost:3100/ there should be a small mesage.
+14. To run grafana open a terminal and go to Monitoring_set_up_&_configuration_files/Grafana in this directory and then run: `docker compose up -d`
+15. To access grafana go to [http://localhost:3000/](http://localhost:3000/).
+16. Log in with username: admin and pasword: admin.
+17. Add in the prexisting dashboard to grafana by going to Dashboards>New Dashboard and submiting the json found in this directory at Vizualization dashboards/Grafana. You need to create two separate dashbaords.
