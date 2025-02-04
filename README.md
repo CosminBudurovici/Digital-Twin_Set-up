@@ -26,7 +26,8 @@ Settings > Project structure > SDK – (java version 17), Language level – SDK
 2. Since the default ports are used by spark u need to go to the docker-compose.yml file and change the ports from 8088:8088 to something like 8098:8088
 3. Open apache supeset and hit the upload button.
 4. Go to Visulaization dashboards/Apache_superset in this directory and submit the folder with the long name.
-   Notes:
+
+Notes:
    - if after entering login the website does not load and u are stuck restart superset and run it with `docker compose -f docker-compose-non-dev.yml up`, remeber that you need to change the port in the docker-compose-non-dev.yml from 8088:8088 to 8098:8088 (if it still doesn't load let it run for some time and try again)
    - To see any information on the added dashboard you need to set up/add a database source (settings > database connections > new). You can either create a local database and add data manually or connect to the spark database later during development. Superset provides an example database you can use to play around and familiarize yourself with the app.
 
